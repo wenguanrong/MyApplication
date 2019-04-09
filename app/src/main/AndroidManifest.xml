@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.administrator.myapplication">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.SET_ALWAYS_FINISH"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+    <application
+        android:name=".c.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="mobilesafe"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <receiver android:name=".c.chapter02.receiver.BootCompleteReciever">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name=".c.chapter01.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".c.chapter01.HomeActivity"/>
+        <!-- <activity android:name=".chartper01.adapter.HomeAdapter"> -->
+        <!-- </activity> -->
+
+        <activity android:name=".c.chapter02.LostFindActivity"/>
+        <activity android:name=".c.chapter02.SetUp1Activity"/>
+        <activity android:name=".c.chapter02.SetUp2Activity"/>
+        <activity android:name=".c.chapter02.SetUp3Activity">
+        </activity>
+        <activity android:name=".c.chapter02.SetUp4Activity">
+        </activity>
+        <activity android:name=".c.chapter02.ContactSelectActivity">
+        </activity>
+    </application>
+
+</manifest>
